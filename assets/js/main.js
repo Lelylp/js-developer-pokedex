@@ -25,16 +25,7 @@ function convertPokemonToLi(pokemon) {
 
 function convertPokemonDetails(pokemon) {
     
-    let stats = pokemon.stats.map(p => `
-    <tr>
-        <td>
-            ${p.name}:
-        </td>
-        <td style="text-align:right">
-            ${p.value}
-        </td>
-    </tr>
-    `).join('');
+    let stats = pokemon.stats.map(p => `<tr><td>${p.name}:</td><td style="text-align:right">${p.value}</td></tr>`).join('');
         
     return `
         <div class="pokemon ${pokemon.type}" onclick="modalOnClick(${pokemon.number})">
